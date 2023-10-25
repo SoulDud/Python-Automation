@@ -16,6 +16,24 @@ def get_typ( filename, dire):
         except OSError as error: 
             print("Directory '%s' can not be created" % new_dir) 
         os.rename(dire, new_path + filename)
+    elif file_extension == ".jpeg":
+        new_dir = "jpeg\\"
+        new_path=os.path.join(dire,new_dir)
+        try: 
+            os.makedirs(new_path, exist_ok = True) 
+            print("Directory '%s' created successfully" % new_dir) 
+        except OSError as error: 
+            print("Directory '%s' can not be created" % new_dir) 
+        os.rename(dire, new_path + filename)
+    elif file_extension == ".zip":
+        new_dir = "ZIP\\"
+        new_path=os.path.join(dire,new_dir)
+        try: 
+            os.makedirs(new_path, exist_ok = True) 
+            print("Directory '%s' created successfully" % new_dir) 
+        except OSError as error: 
+            print("Directory '%s' can not be created" % new_dir) 
+        os.rename(dire, new_path + filename)
 
 
     
